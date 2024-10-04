@@ -1,6 +1,6 @@
 # About Me !
 
-![profile](./../homework/assets/md/profile.jpg)
+![profile](./../assets/about-me/profile.jpg)
 
 ## Intro
 
