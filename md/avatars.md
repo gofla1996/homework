@@ -16,28 +16,28 @@
 > css 코드
 
 ```css
-      .box {
-        box-sizing: border-box;
+.box {
+  box-sizing: border-box;
 
-        background-color: white;
+  background-color: white;
 
-        border: 2px solid lightgray;
-        border-radius: 10px;
-        
-        width: 396px;
-        height: 195px;
-        
-        padding: 20px;
-        margin: 0 auto;
-        
-        overflow: hidden;
-        position: relative;
+  border: 2px solid lightgray;
+  border-radius: 10px;
+  
+  width: 396px;
+  height: 195px;
+  
+  padding: 20px;
+  margin: 0 auto;
+  
+  overflow: hidden;
+  position: relative;
 
-        -webkit-user-select:none;
-        -moz-user-select:none;
-        -ms-user-select:none;
-        user-select:none;
-      }
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}
 ```
 
 2. box 안에 div 태그를 이용해 아바타가 들어갈 공간을 두 줄로 나눈 다음 클래스를 row(first/second)로 지정, 좌우 padding을 자동으로 설정해서 안의 개체들이 적절히 중앙에 배치되도록 했습니다. 첫번째 row 아래에만 margin을 설정하여 각 row 사이 여백을 만들었습니다.
