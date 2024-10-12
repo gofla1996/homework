@@ -1,1 +1,52 @@
 <!-- HTML 마크업을 작성해 주세요 -->
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>네이버 로그인 | Homework</title>
+    <!-- Noto Serif -->
+    <link rel="preload" as="style" href="./../assets/font/notoserif/notoserif.css" />
+    <link rel="stylesheet" href="./../assets/font/notoserif/notoserif.css" />
+    <!-- Pretendard -->
+    <link rel="preload" as="style" href="./../assets/font/pretendard/pretendardvariable-dynamic-subset.css" />
+    <link rel="stylesheet" href="./../assets/font/pretendard/pretendardvariable-dynamic-subset.css" />
+    <!-- css 파일 -->
+    <link rel="stylesheet" href="./styles/login.css" />
+  </head>
+  <body>
+    <img class="naver-logo" src="./../assets/login/naver-logo.svg" alt="네이버 로고" />
+    <section class="login-section">
+      <form action="" method="get" class="login-form">
+        <div class="id-form">
+          <label for="id"></label>
+          <input class="text-input" placeholder="아이디(이메일)" type="email" naem="id" id="id" required />
+        </div>
+        <div class="pw-form">
+          <label for="password"></label>
+          <input
+            class="text-input"
+            placeholder="비밀번호"
+            type="password"
+            name="password"
+            id="password"
+            minlength="10"
+            required
+          />
+        </div>
+        <div class="submit-button">
+          <button class="submit-button" type="submit">로그인</button>
+        </div>
+      </form>
+      <div class="additional-options">
+        <div class="keep-logged-in">
+          <input class="keep-logged-in-checkbox" type="checkbox" name="keep-logged-in" id="keep-logged-in" />
+          <label for="keep-logged-in">로그인 상태유지</label>
+        </div>
+        <div class="ip-security">
+          <a href="./pages/ip_security.html">IP 보안 OFF</a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

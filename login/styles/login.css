@@ -1,1 +1,148 @@
 /* CSS를 활용하여 레이아웃 및 스타일링을 완성해주세요 */
+@import "./../common/best-reset.css";
+
+body {
+  /* 기본 폰트 색상과 폰트 사이즈 지정 */
+  --primary-font-color: #121212;
+  --primary-font-size: 1rem;
+
+  color: var(--primary-font-color);
+  font-size: var(--primary-font-size);
+
+  /* 전체 창 크기 및 스크롤 설정 */
+  width: 100%;
+  inline-size: 100%;
+
+  height: 100vh;
+  block-size: 100vh;
+
+  overflow: hidden;
+
+  /* 보더 박스 지정 */
+  box-sizing: border-box;
+}
+
+/* 네이버 로고 */
+.naver-logo {
+  display: block;
+  inline-size: 230px;
+  margin-inline: auto;
+  margin-block: 4.375rem;
+}
+
+/* 로그인 섹션 전체 영역 */
+.login-section {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-inline: 1.25rem;
+
+  margin-inline: auto;
+}
+
+/* 아이디 비밀번호 입력 및 로그인 버튼 영역 */
+.login-form {
+  --login-form-font-size: 0.875rem;
+  --login-form-block-size: 45px;
+
+  width: 100%;
+  inline-size: 100%;
+
+  /* 인풋과 로그인 버튼 공통 스타일 */
+  input,
+  button {
+    width: 100%;
+    inline-size: 100%;
+    padding: 0.625rem 0.625rem;
+    margin: 0.4rem 0;
+
+    font-size: var(--login-form__font-size);
+    block-size: var(--login-form__block-size);
+
+    outline: none;
+    border: 1px solid #dadada;
+    background-color: #fff;
+  }
+
+  /* 인풋 포커스 시 스타일 */
+  input.text-input:focus {
+    border: 1px solid #03cf5d;
+    background-color: #e9f0fd;
+  }
+
+  /* 로그인 버튼 세부 스타일 */
+  .submit-button button {
+    margin-block-start: 1.25rem;
+    margin-block-end: 0;
+
+    font-size: var(--primary-font-size);
+    color: #fff;
+    background-color: #03cf5d;
+  }
+}
+
+/* 로그인 상태유지 영역 */
+.keep-logged-in {
+  display: flex;
+  align-items: center;
+
+  /* 체크박스 기본 이미지와 스타일 */
+  .keep-logged-in-checkbox {
+    width: 24px;
+    height: 24px;
+
+    background: no-repeat center center;
+    background-image: url(./../../assets/login/checkbox-unchecked.svg);
+    cursor: pointer;
+    appearance: none;
+
+    margin-inline-end: 0.3125rem;
+  }
+
+  /* 체크박스 체크 시 이미지 */
+  .keep-logged-in-checkbox:checked {
+    background-image: url(./../../assets/login/checkbox-checked.svg);
+  }
+}
+
+/* 데스크탑 반응형을 위한 스타일 */
+body {
+  /* 기존 모바일 스타일 */
+  /* 로그인 상태유지 및 아이피 보안 스위치 */
+  .additional-options {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: end;
+    margin-block-start: 0.625rem;
+  }
+
+  .ip-security {
+    display: none;
+  }
+
+  /* 데스크탑 반응형 css */
+  @media (min-width: 768px) {
+    /* 로그인 영역 가로 크기 지정 */
+    .login-section {
+      width: 500px;
+      inline-size: 500px;
+    }
+
+    /* 로그인 상태유지 및 아이피 보안 스위치*/
+    .additional-options {
+      justify-content: space-between;
+    }
+
+    .ip-security {
+      display: block;
+      font-size: var(--primary-font-size);
+
+      a:link,
+      a:visited,
+      a:hover,
+      a:active {
+        text-decoration: none;
+        color: #121212;
+      }
+    }
+  }
+}
